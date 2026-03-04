@@ -45,6 +45,15 @@ export const Secondary: Story = {
 };
 
 export const Large: Story = {
+  parameters: {
+    backgrounds: {
+      options: {
+        red: { name: 'Red', value: '#f00' },
+        green: { name: 'Green', value: '#0f0' },
+        blue: { name: 'Blue', value: '#00f' },
+      },
+    },
+  },
   args: {
     size: "large",
     ...Secondary.args,
