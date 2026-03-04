@@ -5,7 +5,7 @@ import { expect, userEvent, within } from "storybook/test";
 import { Page } from "./Page";
 
 const meta = {
-  title: "Example/Page",
+  title: "Design System/Pages/Design Guideline",
   component: Page,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
@@ -16,10 +16,11 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const LoggedOut: Story = {};
+export const CompanyIdentity: Story = {};
 
 // More on component testing: https://storybook.js.org/docs/writing-tests/interaction-testing
 export const LoggedIn: Story = {
+  name: "Do/Don't",
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const loginButton = canvas.getByRole("button", { name: /Log in/i });
