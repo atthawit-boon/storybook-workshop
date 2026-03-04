@@ -16,8 +16,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const CompanyIdentity: Story = {};
-
 // More on component testing: https://storybook.js.org/docs/writing-tests/interaction-testing
 export const LoggedIn: Story = {
   name: "Do/Don't",
@@ -32,3 +30,5 @@ export const LoggedIn: Story = {
     await expect(logoutButton).toBeInTheDocument();
   },
 };
+
+export const CompanyIdentity: Story = {};
