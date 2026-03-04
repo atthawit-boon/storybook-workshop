@@ -1,0 +1,26 @@
+{
+  "name": "storybook-workshop",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "npm run dev:ui && npm run dev:web",
+    "dev:ui": "turbo run storybook --filter=@repo/ui",
+    "dev:web": "turbo run dev --filter=@repo/web",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "turbo": "^2.8.13",
+    "typescript": "5.9.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@11.9.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
