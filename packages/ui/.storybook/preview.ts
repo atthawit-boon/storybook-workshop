@@ -11,8 +11,14 @@ const preview: Preview = {
     options: {
       storySort: {
         order: [
-          'Design System',
-          ['Pages', ['Design Guideline', ["Do/Don't", 'Company Identity']], 'Inputs', 'Navigations', '*'],
+          "Design System",
+          [
+            "Pages",
+            ["Design Guideline", ["Do/Don't", "Company Identity"]],
+            "Inputs",
+            "Navigations",
+            "*",
+          ],
         ],
       },
     },
