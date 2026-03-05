@@ -1,6 +1,15 @@
+import React from "react";
 import type { Preview } from "@storybook/react-vite";
+import { Watermark } from "../src/stories/Watermark";
 
 const preview: Preview = {
+  decorators: [
+    (Story) => (
+      <Watermark>
+        <Story />
+      </Watermark>
+    ),
+  ],
   parameters: {
     controls: {
       matchers: {

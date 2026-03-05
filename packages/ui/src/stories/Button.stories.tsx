@@ -1,17 +1,13 @@
-import React from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { fn } from "storybook/test";
 
 import { Button } from "./Button";
-import { Watermark } from "./Watermark";
 
 const meta = {
   title: "Design System/Inputs/Button",
   component: Button,
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
     backgroundColor: {
       control: "color",
@@ -55,13 +51,6 @@ export const Large: Story = {
     size: "large",
     ...Secondary.args,
   },
-  decorators: [
-    (Story) => (
-      <Watermark>
-        <Story />
-      </Watermark>
-    ),
-  ],
 };
 
 export const Small: Story = {
