@@ -1,0 +1,50 @@
+{
+  "name": "@repo/ui-preset",
+  "version": "1.3.0",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./theme/dark": {
+      "import": "./dist/theme/dark.mjs",
+      "require": "./dist/theme/dark.cjs"
+    }
+  },
+  "files": [
+    "dist/**"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "npm run clean && npm run build:tsup",
+    "build:tsup": "tsup",
+    "clean": "rimraf dist",
+    "lint": "eslint \"**/*.ts*\"",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "release": "semantic-release"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=4.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.37.0",
+    "globals": "^16.4.0",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "rimraf": "^6.0.1",
+    "semantic-release": "^25.0.0",
+    "shx": "^0.4.0",
+    "tailwindcss": "^4.1.14",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
